@@ -1,8 +1,8 @@
 CACHE MANIFEST
-#2017-02-04 10:15:19
-js/app.js
+#2017-02-04 10:41:11
+/js/app.js
+/js/notes.js
 icon.png
 index.html
 manifest.webmanifest
-js/notes.js
 style.css
