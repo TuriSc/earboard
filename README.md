@@ -1,6 +1,8 @@
 # earboard
 An ear training tool modeled on guitar and bass fretboards
 
+Launch the [earboard web app](https://turisc.github.io/earboard/)
+
 earboard is an ear trainer for musicians whose purpose is to generate note intervals to play along with. Its layout is modeled on the fretboards and standard tuning of stringed instruments like guitar and bass.
 
 - Click SELECT NOTES to exclude notes from the random pool.
