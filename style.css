@@ -1,0 +1,372 @@
+/* EARBOARD STYLESHEET */
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+	background: #222;
+    color: slategray;
+    font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+::selection {
+  background: deeppink;
+  color: white;
+}
+
+::-moz-selection {
+  background: deeppink;
+  color: white;
+}
+
+#display{
+	font-size: 3.0rem;
+	font-weight: 600;
+}
+
+.logo{
+	margin: 1.4rem;
+}
+
+.logo-a{
+	color:white;
+	background:deeppink;
+	padding-left:.3rem;
+	border-radius: .4rem 0 0 .4rem;
+}
+
+.logo-b{
+	background:white;
+	padding-right:.3rem;
+	border-radius: 0 .4rem .4rem 0;
+}
+
+.icon{
+	display: block;
+	margin: 2rem auto;
+}
+
+.nobreak {
+	display: inline-block;
+}
+
+/* LAYOUT */
+.container {
+    margin: 0 auto;
+    max-width: 112rem;
+    padding: 0 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    margin-left: -1rem;
+}
+
+.row .column {
+    margin-bottom: inherit;
+    padding: 0 1rem;
+    display: block;
+    flex: 1;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.row .column.column-offset-20 {
+  margin-left: 20%;
+}
+
+.row .column.column-20 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.row .column .group{
+    flex: 1;
+    margin-left: -1.5rem;
+}
+
+.row .column .first{
+    margin-left: 0;
+}
+
+/* UI */
+.button, .button-checkbox, .toolbar{
+    display: block;
+    background: gainsboro;
+    color: white;
+    border-radius: .4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3rem;
+    letter-spacing: .1rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+	cursor: pointer;
+	min-width: 4rem;
+	white-space: nowrap;
+	padding: 0 .5rem;
+	transition: border-color 0.2s;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button-gray {
+	text-transform: none;
+	color: slategray;
+}
+
+.button-orange {
+	background: orange;
+}
+
+.button-blue {
+	background: darkturquoise;
+}
+
+.button:active, .button-yellow {
+    background-color: yellow !important;
+    color: slategray;
+}
+
+.button-checkbox, .tag-yellow {
+	background-color: transparent;
+	border: .2rem solid yellow;
+}
+
+.button-checkbox::before {
+    content: "● ";
+    font-size: 2rem;
+    color: yellow;
+    line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+.checkbox-off {
+	border: .2rem solid slategray;
+}
+
+.checkbox-off::before {
+	color: slategray;
+}
+
+.toolbar {
+	cursor: unset;
+}
+
+.highlight, .button-pink {
+	background: deeppink;
+	color: white;
+}
+
+.highlight:active {
+	color: yellow;
+}
+
+.editing, .focus {
+	border: .2rem solid deeppink;
+}
+
+.off {
+	background: #333;
+}
+
+.center{
+	text-align:center;
+}
+
+.multiple {
+	overflow: hidden;
+	width: 20rem;
+}
+
+.multiple select {
+	background: transparent;
+	border: none;
+	font-size: 1rem;
+	font-weight: 600;
+	height: 3rem;
+	padding: .5rem;
+	width: 20rem;
+}
+
+.multiple.compact {
+	width: 12rem;
+}
+
+/* TOPNAV */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+}
+
+ul.topnav li {
+	float: left;
+	font-size:1.2rem;
+}
+
+ul.topnav li a {
+	display: inline-block;
+	text-align: center;
+	color:white;
+	margin: 1.2rem 1.4rem;
+	padding: .2rem .6rem;
+	text-decoration: none;
+	background: slategray;
+	border-radius: .4rem;
+}
+
+ul.topnav li a:active {
+	background-color: yellow;
+	color: slategray;
+}
+
+ul.topnav li.menu_item {
+	float: right;
+	
+}
+
+/* OVERLAY */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 5rem;
+    transition: 0.3s;
+}
+
+.overlay .about {
+	padding: 0 1.4rem;
+	width: 45rem;
+	text-transform: unset;
+}
+
+.overlay a {
+    color: darkturquoise;
+    text-decoration:none;
+}
+
+.overlay a:hover{
+    color: yellow;
+}
+
+.overlay span {
+	display: inline-block;
+	text-align: center;
+	color:white;
+	padding: .2rem .4rem;
+	text-decoration: none;
+	border-radius: .4rem;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.overlay .close_btn {
+    padding: 0 1rem;
+    text-decoration: none;
+    font-size: 4rem;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 0;
+    outline: 0;
+}
+
+.overlay.open {
+	width: 45rem;
+}
+
+/* FOOTER */
+
+.about{
+	font-size:1.5rem;
+	text-transform:uppercase;
+}
+
+.about strong{
+	font-weight: 600;
+	color: white;
+}
+
+.about a {
+    color: darkturquoise;
+    text-decoration:underline;
+}
+
+.about a:hover{
+    color: yellow;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 60rem) {
+.breakable{
+	flex-direction: column;
+}
+
+.breakable .column {
+	margin-bottom: 1rem;
+	padding: 0 .9rem;
+}
+
+.row .column.column-20 {
+	flex: unset;
+	max-width: unset;
+}
+
+.overlay.open {
+	width: 100%;
+}
+
+.overlay .about {
+	width: 100%;
+}
+}
+
+/* ANIMATION */
+@-webkit-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes FADE-OUT {
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.fade-out {
+	-webkit-animation: FADE-OUT 0.6s ease-in 0.3s forwards;
+	-moz-animation:	FADE-OUT 0.6s ease-in 0.3s forwards;
+	animation:		 FADE-OUT 0.6s ease-in 0.3s forwards;
+}
